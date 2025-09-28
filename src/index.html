@@ -1,0 +1,450 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quotes App - UI Demo</title>
+    <link rel="stylesheet" href="styles/ui.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div id="app" class="size-full bg-background text-foreground">
+        <!-- Main Content -->
+        <main id="main-content" class="min-h-screen">
+            <!-- Home Screen (Default) -->
+            <div id="home-screen" class="screen active">
+                <div class="pb-20 space-y-8">
+                    <!-- Header -->
+                    <div class="px-6 pt-8 pb-4">
+                        <div class="space-y-2">
+                            <h1 class="text-2xl">Good Morning!</h1>
+                            <p class="text-muted-foreground">Ready to discover some inspiration?</p>
+                        </div>
+                    </div>
+
+                    <!-- Quote of the Day -->
+                    <section class="px-6 space-y-4">
+                        <div class="flex items-center justify-between">
+                            <h2 class="flex items-center space-x-2">
+                                <svg class="h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <circle cx="12" cy="12" r="10"/>
+                                    <polyline points="12,6 12,12 16,14"/>
+                                </svg>
+                                <span>Quote of the Day</span>
+                            </h2>
+                            <button class="btn btn-ghost btn-sm">
+                                <svg class="h-4 w-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M3 7v10a2 2 0 002 2h14a2 2 0 002-2V9a2 2 0 00-2-2H5a2 2 0 00-2-2z"/>
+                                    <polyline points="8,3 8,7 16,7 16,3"/>
+                                </svg>
+                            </button>
+                        </div>
+                        <div class="quote-card hero">
+                            <p class="text-lg mb-4">"The only way to do great work is to love what you do."</p>
+                            <div class="flex items-center justify-between">
+                                <div>
+                                    <p class="text-primary-foreground/90 font-medium">Steve Jobs</p>
+                                    <span class="badge text-emerald-500">Success</span>
+                                </div>
+                                <div class="flex items-center space-x-2">
+                                    <button class="btn btn-ghost btn-sm text-destructive">
+                                        <svg class="w-4 h-4" viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" stroke-width="2">
+                                            <path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.29 1.51 4.04 3 5.5l7 7z"/>
+                                        </svg>
+                                    </button>
+                                    <button class="btn btn-ghost btn-sm">
+                                        <svg class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                            <path d="M4 12v8a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-8"/>
+                                            <polyline points="16,6 12,2 8,6"/>
+                                            <line x1="12" y1="2" x2="12" y2="15"/>
+                                        </svg>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+
+                    <!-- Quick Actions -->
+                    <section class="px-6 space-y-4">
+                        <h2>Quick Actions</h2>
+                        <div class="grid grid-cols-2 gap-4">
+                            <div class="card cursor-pointer hover:shadow-md transition-all duration-200 gradient-blue">
+                                <div class="flex items-center space-x-3">
+                                    <div class="w-10 h-10 bg-blue-500 text-white rounded-lg flex items-center justify-center">
+                                        <svg class="h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                            <path d="M3 7v10a2 2 0 002 2h14a2 2 0 002-2V9a2 2 0 00-2-2H5a2 2 0 00-2-2z"/>
+                                            <polyline points="8,3 8,7 16,7 16,3"/>
+                                        </svg>
+                                    </div>
+                                    <div>
+                                        <h3 class="text-sm">Random Quote</h3>
+                                        <p class="text-xs text-muted-foreground">Get inspired</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card cursor-pointer hover:shadow-md transition-all duration-200 gradient-red">
+                                <div class="flex items-center space-x-3">
+                                    <div class="w-10 h-10 bg-red-500 text-white rounded-lg flex items-center justify-center">
+                                        <svg class="h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                            <path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.29 1.51 4.04 3 5.5l7 7z"/>
+                                        </svg>
+                                    </div>
+                                    <div>
+                                        <h3 class="text-sm">My Favorites</h3>
+                                        <p class="text-xs text-muted-foreground">3 saved</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+
+                    <!-- Popular Categories -->
+                    <section class="px-6 space-y-4">
+                        <h2>Popular Categories</h2>
+                        <div class="grid grid-cols-2 gap-4">
+                            <div class="category-card">
+                                <div class="category-icon">🏆</div>
+                                <h3 class="text-base mb-1">Success</h3>
+                                <p class="text-sm text-muted-foreground">156 quotes</p>
+                            </div>
+                            <div class="category-card">
+                                <div class="category-icon">👑</div>
+                                <h3 class="text-base mb-1">Leadership</h3>
+                                <p class="text-sm text-muted-foreground">89 quotes</p>
+                            </div>
+                            <div class="category-card">
+                                <div class="category-icon">🌱</div>
+                                <h3 class="text-base mb-1">Life</h3>
+                                <p class="text-sm text-muted-foreground">234 quotes</p>
+                            </div>
+                            <div class="category-card">
+                                <div class="category-icon">✨</div>
+                                <h3 class="text-base mb-1">Dreams</h3>
+                                <p class="text-sm text-muted-foreground">67 quotes</p>
+                            </div>
+                        </div>
+                    </section>
+
+                    <!-- Featured Authors -->
+                    <section class="space-y-4">
+                        <div class="px-6">
+                            <h2>Featured Authors</h2>
+                        </div>
+                        <div class="overflow-x-auto">
+                            <div class="flex space-x-4 px-6">
+                                <div class="author-card compact">
+                                    <h3 class="text-base mb-1">Steve Jobs</h3>
+                                    <div class="space-y-1">
+                                        <div class="flex items-center justify-between text-sm text-muted-foreground">
+                                            <span>47 quotes</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="author-card compact">
+                                    <h3 class="text-base mb-1">Albert Einstein</h3>
+                                    <div class="space-y-1">
+                                        <div class="flex items-center justify-between text-sm text-muted-foreground">
+                                            <span>78 quotes</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="author-card compact">
+                                    <h3 class="text-base mb-1">Oscar Wilde</h3>
+                                    <div class="space-y-1">
+                                        <div class="flex items-center justify-between text-sm text-muted-foreground">
+                                            <span>156 quotes</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+
+                    <!-- Your Progress Today -->
+                    <section class="px-6 space-y-4">
+                        <h2>Your Progress Today</h2>
+                        <div class="grid grid-cols-3 gap-4">
+                            <div class="card text-center">
+                                <div class="space-y-1">
+                                    <p class="text-2xl text-primary">12</p>
+                                    <p class="text-xs text-muted-foreground">Quotes Read</p>
+                                </div>
+                            </div>
+                            <div class="card text-center">
+                                <div class="space-y-1">
+                                    <p class="text-2xl text-green-500">3</p>
+                                    <p class="text-xs text-muted-foreground">Favorites</p>
+                                </div>
+                            </div>
+                            <div class="card text-center">
+                                <div class="space-y-1">
+                                    <p class="text-2xl text-orange-500">5</p>
+                                    <p class="text-xs text-muted-foreground">Day Streak</p>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                </div>
+            </div>
+
+            <!-- Discover Screen -->
+            <div id="discover-screen" class="screen">
+                <div class="pb-20 space-y-6">
+                    <div class="px-6 pt-8 pb-4 space-y-4">
+                        <h1 class="text-2xl">Discover</h1>
+                        <div class="search-container relative">
+                            <div class="search-icon">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <circle cx="11" cy="11" r="8"/>
+                                    <path d="m21 21-4.35-4.35"/>
+                                </svg>
+                            </div>
+                            <input class="input search-input" type="text" placeholder="Search quotes, authors, categories...">
+                        </div>
+                    </div>
+
+                    <div class="px-6">
+                        <h2 class="mb-4">Browse by Category</h2>
+                        <div class="grid grid-cols-2 gap-4 mb-8">
+                            <div class="category-card">
+                                <div class="category-icon">🏆</div>
+                                <h3 class="text-base mb-1">Success</h3>
+                                <p class="text-sm text-muted-foreground">156 quotes</p>
+                            </div>
+                            <div class="category-card">
+                                <div class="category-icon">👑</div>
+                                <h3 class="text-base mb-1">Leadership</h3>
+                                <p class="text-sm text-muted-foreground">89 quotes</p>
+                            </div>
+                            <div class="category-card">
+                                <div class="category-icon">❤️</div>
+                                <h3 class="text-base mb-1">Love</h3>
+                                <p class="text-sm text-muted-foreground">145 quotes</p>
+                            </div>
+                            <div class="category-card">
+                                <div class="category-icon">🦉</div>
+                                <h3 class="text-base mb-1">Wisdom</h3>
+                                <p class="text-sm text-muted-foreground">198 quotes</p>
+                            </div>
+                        </div>
+
+                        <h2 class="mb-4">Trending Quotes</h2>
+                        <div class="space-y-4">
+                            <div class="quote-card">
+                                <p class="mb-3">"Be yourself; everyone else is already taken."</p>
+                                <div class="flex items-center justify-between">
+                                    <div>
+                                        <p class="text-muted-foreground font-medium">Oscar Wilde</p>
+                                        <span class="badge text-purple-500">Authenticity</span>
+                                    </div>
+                                    <div class="flex items-center space-x-2">
+                                        <button class="btn btn-ghost btn-sm">
+                                            <svg class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                                <path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.29 1.51 4.04 3 5.5l7 7z"/>
+                                            </svg>
+                                        </button>
+                                        <button class="btn btn-ghost btn-sm">
+                                            <svg class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                                <path d="M4 12v8a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-8"/>
+                                                <polyline points="16,6 12,2 8,6"/>
+                                                <line x1="12" y1="2" x2="12" y2="15"/>
+                                            </svg>
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Favorites Screen -->
+            <div id="favorites-screen" class="screen">
+                <div class="pb-20 space-y-6">
+                    <div class="px-6 pt-8 pb-4 flex items-center justify-between">
+                        <h1 class="text-2xl">My Favorites</h1>
+                        <button class="btn btn-destructive btn-sm">Clear All</button>
+                    </div>
+
+                    <div class="px-6">
+                        <div class="space-y-4">
+                            <div class="quote-card">
+                                <p class="mb-3">"The only way to do great work is to love what you do."</p>
+                                <div class="flex items-center justify-between">
+                                    <div>
+                                        <p class="text-muted-foreground font-medium">Steve Jobs</p>
+                                        <span class="badge text-emerald-500">Success</span>
+                                    </div>
+                                    <div class="flex items-center space-x-2">
+                                        <button class="btn btn-ghost btn-sm text-destructive">
+                                            <svg class="w-4 h-4" viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" stroke-width="2">
+                                                <path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.29 1.51 4.04 3 5.5l7 7z"/>
+                                            </svg>
+                                        </button>
+                                        <button class="btn btn-ghost btn-sm">
+                                            <svg class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                                <path d="M4 12v8a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-8"/>
+                                                <polyline points="16,6 12,2 8,6"/>
+                                                <line x1="12" y1="2" x2="12" y2="15"/>
+                                            </svg>
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="quote-card">
+                                <p class="mb-3">"Be yourself; everyone else is already taken."</p>
+                                <div class="flex items-center justify-between">
+                                    <div>
+                                        <p class="text-muted-foreground font-medium">Oscar Wilde</p>
+                                        <span class="badge text-purple-500">Authenticity</span>
+                                    </div>
+                                    <div class="flex items-center space-x-2">
+                                        <button class="btn btn-ghost btn-sm text-destructive">
+                                            <svg class="w-4 h-4" viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" stroke-width="2">
+                                                <path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.29 1.51 4.04 3 5.5l7 7z"/>
+                                            </svg>
+                                        </button>
+                                        <button class="btn btn-ghost btn-sm">
+                                            <svg class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                                <path d="M4 12v8a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-8"/>
+                                                <polyline points="16,6 12,2 8,6"/>
+                                                <line x1="12" y1="2" x2="12" y2="15"/>
+                                            </svg>
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Settings Screen -->
+            <div id="settings-screen" class="screen">
+                <div class="pb-20 space-y-6">
+                    <div class="px-6 pt-8 pb-4">
+                        <h1 class="text-2xl">Settings</h1>
+                    </div>
+
+                    <div class="px-6 space-y-6">
+                        <!-- Theme Section -->
+                        <div class="space-y-4">
+                            <h2>Appearance</h2>
+                            <div class="theme-selector">
+                                <button class="theme-option" data-theme="light">
+                                    <div class="text-2xl mb-1">☀️</div>
+                                    <span class="text-sm">Light</span>
+                                </button>
+                                <button class="theme-option active" data-theme="dark">
+                                    <div class="text-2xl mb-1">🌙</div>
+                                    <span class="text-sm">Dark</span>
+                                </button>
+                                <button class="theme-option" data-theme="system">
+                                    <div class="text-2xl mb-1">💻</div>
+                                    <span class="text-sm">System</span>
+                                </button>
+                            </div>
+                        </div>
+
+                        <!-- Preferences Section -->
+                        <div class="space-y-4">
+                            <h2>Preferences</h2>
+                            <div class="card space-y-4">
+                                <div class="flex items-center justify-between">
+                                    <div>
+                                        <p class="font-medium">Notifications</p>
+                                        <p class="text-sm text-muted-foreground">Get notified about new quotes</p>
+                                    </div>
+                                    <div class="switch">
+                                        <button class="switch-button active">
+                                            <div class="switch-thumb"></div>
+                                        </button>
+                                    </div>
+                                </div>
+                                <div class="flex items-center justify-between">
+                                    <div>
+                                        <p class="font-medium">Sound Effects</p>
+                                        <p class="text-sm text-muted-foreground">Play sounds for interactions</p>
+                                    </div>
+                                    <div class="switch">
+                                        <button class="switch-button">
+                                            <div class="switch-thumb"></div>
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Statistics Section -->
+                        <div class="space-y-4">
+                            <h2>Statistics</h2>
+                            <div class="card">
+                                <div class="grid grid-cols-2 gap-4 text-center">
+                                    <div>
+                                        <p class="text-2xl text-primary">12</p>
+                                        <p class="text-sm text-muted-foreground">Quotes Read</p>
+                                    </div>
+                                    <div>
+                                        <p class="text-2xl text-green-500">3</p>
+                                        <p class="text-sm text-muted-foreground">Favorites</p>
+                                    </div>
+                                    <div>
+                                        <p class="text-2xl text-orange-500">5</p>
+                                        <p class="text-sm text-muted-foreground">Day Streak</p>
+                                    </div>
+                                    <div>
+                                        <p class="text-2xl text-blue-500">Dec 2024</p>
+                                        <p class="text-sm text-muted-foreground">Member Since</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+
+        <!-- Bottom Navigation -->
+        <nav id="bottom-navigation" class="fixed bottom-0 left-0 right-0 bg-card border-t border-border z-30">
+            <div class="grid grid-cols-4 h-16">
+                <button class="nav-item active" data-screen="home">
+                    <svg class="nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="m3 9 9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/>
+                        <polyline points="9,22 9,12 15,12 15,22"/>
+                    </svg>
+                    <span class="nav-label">Home</span>
+                </button>
+                
+                <button class="nav-item" data-screen="discover">
+                    <svg class="nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <circle cx="11" cy="11" r="8"/>
+                        <path d="m21 21-4.35-4.35"/>
+                    </svg>
+                    <span class="nav-label">Discover</span>
+                </button>
+                
+                <button class="nav-item" data-screen="favorites">
+                    <svg class="nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.29 1.51 4.04 3 5.5l7 7z"/>
+                    </svg>
+                    <span class="nav-label">Favorites</span>
+                    <span class="nav-badge">3</span>
+                </button>
+                
+                <button class="nav-item" data-screen="settings">
+                    <svg class="nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <circle cx="12" cy="12" r="3"/>
+                        <path d="M12 1v6M12 17v6M4.22 4.22l4.24 4.24M15.54 15.54l4.24 4.24M1 12h6M17 12h6M4.22 19.78l4.24-4.24M15.54 8.46l4.24-4.24"/>
+                    </svg>
+                    <span class="nav-label">Settings</span>
+                </button>
+            </div>
+        </nav>
+    </div>
+
+    <script src="ui.js"></script>
+</body>
+</html>
