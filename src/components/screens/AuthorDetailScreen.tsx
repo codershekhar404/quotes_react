@@ -62,6 +62,7 @@ export function AuthorDetailScreen() {
   };
 
   const handleRelatedAuthorClick = (authorId: string) => {
+    console.log(authorId)
     dispatch({ type: 'SET_SCREEN', payload: { screen: 'author', authorId } });
   };
 
